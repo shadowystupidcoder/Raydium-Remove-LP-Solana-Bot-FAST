@@ -9,7 +9,6 @@ import { deriveKeys } from "./poolKeys"
 
 
 // Set your wallet and RPC in config.ts, fill out the 5 lines below this. run npx ts-node ammRemoveLiquidity to remove all the liquidity that you are currently have tokens for.
-// Disclaimer: You will incur a small fee for this operation. This is a destructive operation and will remove all liquidity youre holding. You will receive the base and quote tokens in return.
 
 // user config
 const MARKET_ID = "23ffaf3f..."
