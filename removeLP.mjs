@@ -85,7 +85,7 @@ return(ixs)
 
 
 
-export async function getKeys(marketId, owner) {
+async function getKeys(marketId, owner) {
 const SPL_MINT_LAYOUT = struct([ u32('mintAuthorityOption'), publicKey('mintAuthority'), u64('supply'), u8('decimals'), u8('isInitialized'), u32('freezeAuthorityOption'), publicKey('freezeAuthority')])
   const marketInfo = await getMarketInfo(marketId);
   const marketFields = await getDecodedData(marketInfo);
