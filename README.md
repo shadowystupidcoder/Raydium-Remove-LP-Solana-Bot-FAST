@@ -1,3 +1,7 @@
-This isn't actually as fast as it can be I recently figured out. If you want a bot that reads out the amount of SOL in LP in a loop every second in terminal and then just type a command to remove LP at any moment, add me on Discord: shadowystupidcoder
+## UPDATED. Remove Raydium LP. Very fast. 
 
-I don't want to make that one open source quite yet because it will be abused by bad actors I imagine
+1. npm install
+  
+2. enter your wallet and the market id for your LP token, and your RPC url
+  
+3. run "node removeLP.mjs" in terminal, it will remove your entire lp token balance instantly from its pool. you dont need token accounts open, this will open them if they are closed.
