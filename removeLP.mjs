@@ -75,10 +75,6 @@ ixs.push(priority)
 ixs.push(createWsolQuoteAta)
 ixs.push(createBaseAta)
 ixs.push(rem)
-if (keys.quoteMint.toString() === "So11111111111111111111111111111111111111112") {
-ixs.push(closeSol)
-ixs.push(step)
-}
 return(ixs)
 }
 
