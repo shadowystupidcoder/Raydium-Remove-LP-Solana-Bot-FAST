@@ -1,0 +1,16 @@
+{
+	"dependencies": {
+		"@solana/buffer-layout": "^4.0.0",
+		"@solana/buffer-layout-utils": "^0.2.0",
+		"@solana/spl-token": "^0.3.8",
+		"@solana/web3.js": "^1.78.5",
+    "@openbook-dex/openbook": "^0.0.9",
+    "bs58": "^6.0.0"
+	},
+	"resolutions": {
+		"@solana/buffer-layout": "^4.0.0"
+	},
+	"devDependencies": {
+		"@types/bn.js": "^5.1.2"
+	}
+}
