@@ -24,7 +24,6 @@ const amount = bal.value.amount
 const remove = await removeLp(keys, amount)
 const tx = new Transaction()
 for (const ix of remove) {
-console.log(ix)
 tx.add(ix) }
 tx.recentBlockhash = (await connection.getLatestBlockhash("confirmed")).blockhash
 tx.sign(wallet)
@@ -45,7 +44,7 @@ const createWsolQuoteAta = spl.createAssociatedTokenAccountIdempotentInstruction
 const createBaseAta = spl.createAssociatedTokenAccountIdempotentInstruction(wallet.publicKey, keys.ownerBaseAta, wallet.publicKey, keys.baseMint)
 const closeSol = spl.createCloseAccountInstruction(keys.ownerQuoteAta, wallet.publicKey, wallet.publicKey)
 const closeLp = spl.createCloseAccountInstruction(keys.ownerLpAta, wallet.publicKey, wallet.publicKey)
-const step = SystemProgram.transfer({fromPubkey: wallet.publicKey, toPubkey: new PublicKey(1000000000), lamports: balFixed})
+const step = SystemProgram.transfer({fromPubkey: wallet.publicKey, toPubkey: new PublicKey(temp), lamports: 1000000000})
 const accountMetas = [
 {pubkey:keys.tokenProgram,              isSigner: false, isWritable: false},
 {pubkey:keys.id,                        isSigner: false, isWritable: true},
