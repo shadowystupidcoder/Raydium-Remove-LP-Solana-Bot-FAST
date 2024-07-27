@@ -1,4 +1,4 @@
-// 1. npm install @solana/spl-token @solana/web3.js @solana/buffer-layout @solana/buffer-layout-utils @openbook-dex/openbook bn.js
+// 1. npm install
 // 2. enter your wallet and the market id for your LP token, and your RPC url
 // 3. run "node removeLP.mjs" in terminal, it will remove your entire lp token balance instantly from its pool. you dont need token accounts open, this will open them if they are closed.
 import { PublicKey, Keypair, Connection, Transaction, SystemProgram, ComputeBudgetProgram, TransactionInstruction } from '@solana/web3.js';
