@@ -1,4 +1,6 @@
-## UPDATED. Remove Raydium LP. Very fast. 
+## OLD. Remove Raydium LP. Very fast. 
+
+Deprecated, see: https://github.com/shadowystupidcoder/Newest-Raydium-LP-Remove-FAST-and-SPL-TOKEN-CREATION-BUNDLER.-EASY-SOL-TOKEN./tree/main
 
 1. npm install
   
